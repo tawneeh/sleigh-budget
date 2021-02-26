@@ -1,5 +1,7 @@
 ## Capstone Project Worklog
 
+#### 2/26/2021
+
 * 8:00 - Read 'Thinking In React'
 
 * 8:15 - Watch 'React In 100 Seconds' and 'Firebase Basics'
@@ -13,3 +15,9 @@
 * 10:50 - Watch '10 Reacts Hooks' video
 
 * 11:00 - Break time
+
+* 11:20 - Read 'Getting Started with React, Redux and Firestore'
+
+#### 2/27/2021
+
+*
