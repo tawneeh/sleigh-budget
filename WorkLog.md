@@ -9,3 +9,5 @@
 * 9:30 - Update Proposal
 
 * 10:00 - Review React Fundamentals Lessons
+
+* 10:50 - Watch '10 Reacts Hooks' video
