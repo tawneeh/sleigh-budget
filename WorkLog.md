@@ -7,3 +7,5 @@
 * 8:30 - Create logo
 
 * 9:30 - Update Proposal
+
+* 10:00 - Review React Fundamentals Lessons
