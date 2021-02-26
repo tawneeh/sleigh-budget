@@ -20,4 +20,6 @@
 
 * 11:48 - Consider app options and planning and component hierarchy
 
+* 1:15 - Review Planning a React Application lesson
+
 #### 2/27/2021
