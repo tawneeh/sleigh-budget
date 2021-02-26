@@ -24,4 +24,6 @@
 
 * 2:00 - Review React with Redux lessons
 
+* 2:30 - Add basic component diagram plan
+
 #### 2/27/2021
