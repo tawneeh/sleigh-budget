@@ -21,5 +21,3 @@
 * 11:48 - Consider app options and planning and component hierarchy
 
 #### 2/27/2021
-
-*
