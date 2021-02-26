@@ -35,7 +35,7 @@ Actions and reducers have been tested. To run the tests, type `npm test` into th
 
 ## 🌳 React Component Tree
 
-<img style="width: 30% height: 30%" src="./read-me-assets/TODO.png">
+<img style="width: 30% height: 30%" src="./read-me-assets/SleighBudget.png">
 
 ## 🐜 Known Bugs
 
