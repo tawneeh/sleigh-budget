@@ -5,3 +5,5 @@
 * 8:15 - Watch 'React In 100 Seconds' and 'Firebase Basics'
 
 * 8:30 - Create logo
+
+* 9:30 - Update Proposal
