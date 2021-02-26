@@ -22,4 +22,6 @@
 
 * 1:15 - Review Planning a React Application lesson
 
+* 2:00 - Review React with Redux lessons
+
 #### 2/27/2021
