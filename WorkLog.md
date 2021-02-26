@@ -1,10 +1,5 @@
 ## Capstone Project Worklog
 
-Shawn's Example:
- 9:10am - research Google calendars for implementing into main UI
+* 8:00 - Read 'Thinking In React'
 
- 9:45am - gave up on Google calendars for now, switch to design UI and mock wireframe 
-
- 12:50pm - continue research on Google calendars implementation
-
- 1:30pm - create repo [Google Calendar Test](#)
+* 8:15 - Watch 'React In 100 Seconds' and 'Firebase Basics'
