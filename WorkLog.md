@@ -18,6 +18,8 @@
 
 * 11:20 - Read 'Getting Started with React, Redux and Firestore'
 
+* 11:48 - Consider app options and planning and component hierarchy
+
 #### 2/27/2021
 
 *
