@@ -30,4 +30,6 @@
 
 * 4:08 - Continue lesson review to cement React/Redux/Firebase understanding
 
+* 4:38 - Continue Firebase research
+
 #### 2/27/2021
