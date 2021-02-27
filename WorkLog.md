@@ -26,4 +26,8 @@
 
 * 2:30 - Add basic component diagram plan
 
+* 3:00 - Add a Header
+
+* 4:08 - Continue lesson review to cement React/Redux/Firebase understanding
+
 #### 2/27/2021
