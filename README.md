@@ -1,6 +1,6 @@
 # ⚛️ _SleighBudget_
 
-#### _Capstone Project for Epicodus_
+#### _SLay the Season_
 #### _DATE 02.26.2021_
 
 #### ✒️ By _**Tawnee Harris**_
