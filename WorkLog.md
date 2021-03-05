@@ -40,4 +40,6 @@
 
 #### 3/05/2021
 
-* Add Redux
+* 8:20 - Add Redux
+
+* 11:25 - Short break
