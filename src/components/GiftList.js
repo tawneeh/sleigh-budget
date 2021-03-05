@@ -1,11 +1,19 @@
 import React from "react";
 import Gift from "./Gift";
 import PropTypes from "prop-types";
+import { useSelector } from 'react-redux';
+import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 
 function GiftList(props) {
+  useFirestoreConnect([
+    { collection: 'gifts' }
+  ]);
+
+  const gifts = useSelector(state => state.firestore.ordered.gifts);
+  if (isLoaded(gifts)) {
   return (
     <>
-      {Object.values(props.giftList).map((gift) => {
+      {gifts.map((gift) => {
         return <Gift
           whenGiftClicked = { props.onGiftSelection }
           recipient={gift.recipient}
@@ -16,10 +24,15 @@ function GiftList(props) {
       })}
     </>
   );
+
+  } else {
+    return (
+      <h3>Loading...</h3>
+    )
+  }
 }
 
 GiftList.propTypes = {
-  giftList: PropTypes.object,
   onGiftSelection: PropTypes.func
 };
 
