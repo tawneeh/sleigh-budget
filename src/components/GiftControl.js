@@ -6,6 +6,7 @@ import EditGiftForm from "./EditGiftForm";
 import * as a from './../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withFirestore } from 'react-redux-firebase';
 
 class GiftControl extends React.Component {
 
@@ -31,8 +32,15 @@ class GiftControl extends React.Component {
   }
 
   handleChangingSelectedGift = (id) => {
-    const selectedGift = this.props.masterGiftList[id];
-    this.setState({selectedGift: selectedGift});
+    this.props.firestore.get({collection: 'gifts', doc: id}).then((gift) => {
+      const firestoreGift = {
+        recipient: gift.get("recipient"),
+        giftName: gift.get("giftName"),
+        dollarAmount: gift.get("dollarAmlunt"),
+        id: gift.id
+    }
+    this.setState({selectedGift: firestoreGift});
+    });
   }
 
   handleAddingNewGiftToList = () => {
@@ -102,6 +110,6 @@ const mapStateToProps = state => {
   }
 }
 
-GiftControl = connect(mapStateToProps)(GiftControl);
+GiftControl = withFirestore(mapStateToProps)(GiftControl); // is mapStateToProps needed here??
 
 export default GiftControl;
