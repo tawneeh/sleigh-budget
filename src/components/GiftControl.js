@@ -5,7 +5,7 @@ import GiftDetail from "./GiftDetail";
 import EditGiftForm from "./EditGiftForm";
 import * as a from './../actions';
 import PropTypes from 'prop-types';
-import { withFirestore } from 'react-redux-firebase';
+import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class GiftControl extends React.Component {
 
@@ -67,28 +67,41 @@ class GiftControl extends React.Component {
   render() {
     let currentVisibleState = null;
     let buttonText = null;
-    if (this.state.editing) {
-      currentVisibleState = <EditGiftForm gift = {this.state.selectedGift}
-      onEditGift = {this.handleEditingGiftInList} />
-      buttonText = "Return to the Gift List";
-    } else if (this.state.selectedGift != null) {
-      currentVisibleState = <GiftDetail gift = {this.state.selectedGift} 
-      onClickingDelete = {this.handleDeletingGift}
-      onClickingEdit = {this.handleEditClick} />
-      buttonText = "Return to the Gift List";
-    } else if (this.props.formVisibleOnPage) {
-      currentVisibleState = <NewGiftForm onNewGiftCreation={this.handleAddingNewGiftToList} />
-      buttonText = "Return to the Gift List";
-    } else {
-      currentVisibleState = <GiftList giftList={this.props.masterGiftList}onGiftSelection={this.handleChangingSelectedGift} />;
-      buttonText = "Add a Gift";
-    } // replace this.props.masterGiftList with this.props.firestore ??
-    return (
-      <>
-        {currentVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
-      </>
-    );
+    const auth = this.props.firebase.auth();
+    if (!isLoaded(auth)) {
+      return (
+        <h3>Loading...</h3>
+      )
+    }
+    else if ((isLoaded(auth)) && (auth.currentUser == null)) {
+      return (
+        <h3>Please sign in!</h3>
+      )
+    }
+    else if ((isLoaded(auth)) && (auth.currentUser != null)) {
+      if (this.state.editing) {
+        currentVisibleState = <EditGiftForm gift = {this.state.selectedGift}
+        onEditGift = {this.handleEditingGiftInList} />
+        buttonText = "Return to the Gift List";
+      } else if (this.state.selectedGift != null) {
+        currentVisibleState = <GiftDetail gift = {this.state.selectedGift} 
+        onClickingDelete = {this.handleDeletingGift}
+        onClickingEdit = {this.handleEditClick} />
+        buttonText = "Return to the Gift List";
+      } else if (this.props.formVisibleOnPage) {
+        currentVisibleState = <NewGiftForm onNewGiftCreation={this.handleAddingNewGiftToList} />
+        buttonText = "Return to the Gift List";
+      } else {
+        currentVisibleState = <GiftList giftList={this.props.masterGiftList}onGiftSelection={this.handleChangingSelectedGift} />;
+        buttonText = "Add a Gift";
+      } // replace this.props.masterGiftList with this.props.firestore ??
+      return (
+        <>
+          {currentVisibleState}
+          <button onClick={this.handleClick}>{buttonText}</button>
+        </>
+      );
+    }
   }
 }
 
