@@ -35,14 +35,9 @@
 #### 3/02/2021
 
 * 5:00 - Watch 'Why you should look into these React component styling options'
-    <button onClick={props.onClick} style={{
-      font: 'inherit', // to inherit the font from the rest of the page
-      cursor: 'pointer' // pointer will be a hand cursor over the button!
-    }}>
-    </button>
-
-    Inline styling might have some drawbacks. Can't use pseudo effects like hover with inline styling. 
-
-    How about styled components?? Powerful real CSS styling. Install the package npm install --save styled-components. Import styled from 'styled-components'; A little complex. It takes CSS code you write and adds it into the head and automatically creates a new class name to assign to your component. *** Might go with this! Hover, etc is easy to do with styled components.
 
 * 5:25 - Continue lesson review
+
+#### 3/05/2021
+
+* Add Redux
