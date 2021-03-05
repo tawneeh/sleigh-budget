@@ -5,7 +5,6 @@ import GiftDetail from "./GiftDetail";
 import EditGiftForm from "./EditGiftForm";
 import * as a from './../actions';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { withFirestore } from 'react-redux-firebase';
 
 class GiftControl extends React.Component {
@@ -81,9 +80,9 @@ class GiftControl extends React.Component {
       currentVisibleState = <NewGiftForm onNewGiftCreation={this.handleAddingNewGiftToList} />
       buttonText = "Return to the Gift List";
     } else {
-      currentVisibleState = <GiftList giftList={this.props.masterGiftList} onGiftSelection={this.handleChangingSelectedGift} />;
+      currentVisibleState = <GiftList giftList={this.props.masterGiftList}onGiftSelection={this.handleChangingSelectedGift} />;
       buttonText = "Add a Gift";
-    }
+    } // replace this.props.masterGiftList with this.props.firestore ??
     return (
       <>
         {currentVisibleState}
@@ -94,13 +93,11 @@ class GiftControl extends React.Component {
 }
 
 GiftControl.propTypes = {
-  masterGiftList: PropTypes.object,
   formVisibleOnPage: PropTypes.bool
 };
 
 const mapStateToProps = state => {
   return {
-    masterGiftList: state.masterGiftList,
     formVisibleOnPage: state.formVisibleOnPage
   }
 }
