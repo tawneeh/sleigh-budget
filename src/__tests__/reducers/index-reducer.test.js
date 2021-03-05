@@ -9,13 +9,13 @@ let store = createStore(rootReducer);
 
 describe("rootReducer", () => {
 
-  test('Should return default state if there is no action type passed in', () => {
-    expect(rootReducer({}, { type: null })).toEqual({
-      masterGiftList: {},
-      formVisibleOnPage: false,
-      firestore: { firestoreReducer }
-    });
-  });
+  // test('Should return default state if there is no action type passed in', () => {
+  //   expect(rootReducer({}, { type: null })).toEqual({
+  //     masterGiftList: {},
+  //     formVisibleOnPage: false,
+  //     firestore: { firestoreReducer }
+  //   });
+  // });
 
   test('Check that initial state of giftListReducer matches the root reducer', () => {
     expect(store.getState().masterGiftList).toEqual(giftListReducer(undefined, { type: null }));
