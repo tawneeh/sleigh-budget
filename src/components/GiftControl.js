@@ -102,6 +102,6 @@ const mapStateToProps = state => {
   }
 }
 
-GiftControl = withFirestore(mapStateToProps)(GiftControl); // is mapStateToProps needed here??
+GiftControl = withFirestore(GiftControl);
 
 export default GiftControl;
