@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 function GiftList(props) {
   return (
     <>
-      <hr />
       {Object.values(props.giftList).map((gift) => {
         return <Gift
           whenGiftClicked = { props.onGiftSelection }

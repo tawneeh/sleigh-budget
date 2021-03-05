@@ -9,6 +9,7 @@ function Gift(props) {
         <h3>{props.giftName}</h3>
         <h3>{props.dollarAmount}</h3>
       </div>
+      <hr />
     </>
   );
 }
