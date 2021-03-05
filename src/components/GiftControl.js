@@ -60,15 +60,12 @@ class GiftControl extends React.Component {
     this.setState({editing: true});
   }
 
-  // handleEditingGiftInList = (giftToEdit) => {
-  //   const { dispatch } = this.props;
-  //   const action = a.addGift(giftToEdit);
-  //   dispatch(action);
-  //   this.setState({
-  //     editing: false,
-  //     selectedGift: null
-  //   });
-  // }
+  handleEditingGiftInList = () => {
+    this.setState({
+      editing: false,
+      selectedGift: null
+    });
+  }
 
   render() {
     let currentVisibleState = null;
