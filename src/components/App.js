@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './Header';
-import './App.css';
+import GiftControl from './GiftControl';
+import './../App.css';
 
 function App() {
   return (
     <>
       <Header />
+      <GiftControl />
     </>
   );
 }
