@@ -41,7 +41,7 @@ class GiftControl extends React.Component {
     }
     this.setState({selectedGift: firestoreGift});
     });
-  } // can add a try catch block to this code block
+  }
 
   handleAddingNewGiftToList = () => {
     const { dispatch } = this.props;
