@@ -50,9 +50,7 @@ class GiftControl extends React.Component {
   }
 
   handleDeletingGift = (id) => {
-    const { dispatch } = this.props;
-    const action = a.deleteGift(id);
-    dispatch(action);
+    this.props.firestore.delete({collection: 'gifts', doc: id});
     this.setState({selectedGift: null});
   }
 
