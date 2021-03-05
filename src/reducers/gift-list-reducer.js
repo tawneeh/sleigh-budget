@@ -1,7 +1,7 @@
 import * as c from './../actions/ActionTypes';
 
 export default (state = {}, action) => {
-  const { recipient, giftName, dollarAmount, id } = action;
+  const { id } = action;
   switch (action.type) {
   case c.DELETE_GIFT:
     let newState = { ...state };
