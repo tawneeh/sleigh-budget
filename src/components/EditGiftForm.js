@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useFirestore } from 'react-redux-firebase';
 
 function EditGiftForm (props) {
+  const { gift } = props;
   const firestore = useFirestore();
 
   function handleEditGiftFormSubmission(event) {
