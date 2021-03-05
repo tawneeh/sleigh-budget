@@ -1,4 +1,5 @@
 import rootReducer from '../../reducers/index';
+import firestoreReducer from '../../reducers/index';
 import { createStore } from 'redux';
 import giftListReducer from '../../reducers/gift-list-reducer';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
@@ -11,7 +12,8 @@ describe("rootReducer", () => {
   test('Should return default state if there is no action type passed in', () => {
     expect(rootReducer({}, { type: null })).toEqual({
       masterGiftList: {},
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      firestore: { firestoreReducer }
     });
   });
 
