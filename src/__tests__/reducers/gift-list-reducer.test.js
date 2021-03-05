@@ -26,26 +26,6 @@ describe('giftListReducer', () => {
     expect(giftListReducer({}, { type: null })).toEqual({});
   });
 
-  test('Should add new gift data to the masterGiftList', () => {
-    const { recipient, giftName, dollarAmount, id } = giftData;
-    action = {
-    type: c.ADD_GIFT,
-    recipient: recipient,
-    giftName: giftName,
-    dollarAmount: dollarAmount,
-    id: id
-    };
-
-    expect(giftListReducer({}, action)).toEqual({
-      [id] : {
-      recipient: recipient,
-      giftName: giftName,
-      dollarAmount: dollarAmount,
-      id: id
-      }
-    });
-  });
-
   test('Should successfully delete a gift', () => {
     action = {
       type: c.DELETE_GIFT,

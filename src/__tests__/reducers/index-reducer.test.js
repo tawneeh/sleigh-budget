@@ -25,18 +25,6 @@ describe("rootReducer", () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
 
-  test('Check that ADD_GIFT action works for giftListReducer and root reducer', () => {
-    const action = {
-    type: c.ADD_GIFT,
-    recipient: 'Bob',
-    giftName: 'Watch',
-    dollarAmount: '50',
-    id: 1
-    }
-    store.dispatch(action);
-    expect(store.getState().masterGiftList).toEqual(giftListReducer(undefined, action));
-  });
-
   test('Check that TOGGLE_FORM works for formVisibleReducer and root reducer', () => {
     const action = {
       type: c.TOGGLE_FORM

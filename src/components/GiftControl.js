@@ -35,12 +35,10 @@ class GiftControl extends React.Component {
     this.setState({selectedGift: selectedGift});
   }
 
-  handleAddingNewGiftToList = (newGift) => {
+  handleAddingNewGiftToList = () => {
     const { dispatch } = this.props;
-    const action = a.addGift(newGift);
+    const action = a.toggleForm();
     dispatch(action);
-    const action2 = a.toggleForm();
-    dispatch(action2);
   }
 
   handleDeletingGift = (id) => {
@@ -54,15 +52,15 @@ class GiftControl extends React.Component {
     this.setState({editing: true});
   }
 
-  handleEditingGiftInList = (giftToEdit) => {
-    const { dispatch } = this.props;
-    const action = a.addGift(giftToEdit);
-    dispatch(action);
-    this.setState({
-      editing: false,
-      selectedGift: null
-    });
-  }
+  // handleEditingGiftInList = (giftToEdit) => {
+  //   const { dispatch } = this.props;
+  //   const action = a.addGift(giftToEdit);
+  //   dispatch(action);
+  //   this.setState({
+  //     editing: false,
+  //     selectedGift: null
+  //   });
+  // }
 
   render() {
     let currentVisibleState = null;

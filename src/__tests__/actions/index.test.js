@@ -9,16 +9,6 @@ describe('sleigh budget actions', () => {
     });
   });
 
-  it('addGift should create ADD_GIFT action', () => {
-    expect(actions.addGift({recipient: 'Bob', giftName: 'Watch', dollarAmount: '50', id: 1})).toEqual({
-    type: c.ADD_GIFT,
-    recipient: 'Bob',
-    giftName: 'Watch',
-    dollarAmount: '50',
-    id: 1
-    });
-  });
-
   it('deleteGift should create DELETE_GIFT action', () => {
     expect(actions.deleteGift(1)).toEqual({
       type: c.DELETE_GIFT,
