@@ -10,14 +10,14 @@ Users are people who love Christmas and need help budgeting for gifts and/or get
 
 ##### Minimum Viable Product
 * Christmas Gift List
-* Budgeting tool with bar graphs
+* Budgeting with bar graphs
 * Nightmare Before Christmas Mode (dark mode)
 
 ##### Tools for MVP
 * ReactJS (frontend)
 * Firebase (BaaS)
 * Firestore (database solution)
-* Bootstrap (styling)
+* Styled Components Library (styling)
 
 ##### Additional Features
 * Host live with Firebase
@@ -40,4 +40,4 @@ Users are people who love Christmas and need help budgeting for gifts and/or get
 *   freepik.com
 
 ##### Additional Information
-* Planning to eventaully pivot to an AllThingsFestive app which provides services specific to Holidays other than Christmas.
+* Planning to eventually pivot to an AllThingsFestive app which provides services specific to Holidays other than Christmas.
