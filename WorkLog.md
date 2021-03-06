@@ -49,3 +49,5 @@
 * 3:55 - My 'Add a Gift' button no longer does anything. No error messages...
 
 * 4:34 - 'Add a Gift' bug is fixed! However, editing a gift is not working
+
+* 4:47 - Start adding Dark Mode - https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
