@@ -47,3 +47,5 @@
 * 2:38 - Review adding a Signin component, client side routing, and Firebase Authentication
 
 * 3:55 - My 'Add a Gift' button no longer does anything. No error messages...
+
+* 4:34 - 'Add a Gift' bug is fixed! However, editing a gift is not working
