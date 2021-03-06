@@ -5,6 +5,7 @@ import GiftDetail from "./GiftDetail";
 import EditGiftForm from "./EditGiftForm";
 import * as a from './../actions';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class GiftControl extends React.Component {
@@ -73,12 +74,12 @@ class GiftControl extends React.Component {
         <h3>Loading...</h3>
       )
     }
-    else if ((isLoaded(auth)) && (auth.currentUser == null)) {
+    if ((isLoaded(auth)) && (auth.currentUser == null)) {
       return (
         <h3>Please sign in!</h3>
       )
     }
-    else if ((isLoaded(auth)) && (auth.currentUser != null)) {
+    if ((isLoaded(auth)) && (auth.currentUser != null)) {
       if (this.state.editing) {
         currentVisibleState = <EditGiftForm gift = {this.state.selectedGift}
         onEditGift = {this.handleEditingGiftInList} />
@@ -92,9 +93,9 @@ class GiftControl extends React.Component {
         currentVisibleState = <NewGiftForm onNewGiftCreation={this.handleAddingNewGiftToList} />
         buttonText = "Return to the Gift List";
       } else {
-        currentVisibleState = <GiftList giftList={this.props.masterGiftList}onGiftSelection={this.handleChangingSelectedGift} />;
+        currentVisibleState = <GiftList onGiftSelection={this.handleChangingSelectedGift} />;
         buttonText = "Add a Gift";
-      } // replace this.props.masterGiftList with this.props.firestore ??
+      }
       return (
         <>
           {currentVisibleState}
@@ -115,6 +116,6 @@ const mapStateToProps = state => {
   }
 }
 
-GiftControl = withFirestore(GiftControl);
+GiftControl = connect(mapStateToProps)(GiftControl);
 
-export default GiftControl;
+export default withFirestore(GiftControl);
