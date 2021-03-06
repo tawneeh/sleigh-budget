@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 function GiftDetail(props) {
   const { gift, onClickingDelete } = props;
+  console.log(gift); // dollarAmount is returning undefined
   return (
     <>
       <h1>Gift Details</h1>
