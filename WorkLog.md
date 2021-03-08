@@ -63,3 +63,5 @@
 * 1:30 - Meeting with Brooke
 
 * 2:15 - Research displaying data dynamically from Firestore using chart.js. Not a lot of luck finding good docs so far
+
+* 3:00 - Look into making my toggle dark mode button a jack-o-lantern icon
