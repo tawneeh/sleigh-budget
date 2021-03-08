@@ -11,7 +11,7 @@ function Graph() {
         datasets: [
           {
             label: "Dollar Bills",
-            data: [10, 19, 0],
+            data: [10, 80, 0],
             backgroundColor: [
               "Red",
               "Green"
