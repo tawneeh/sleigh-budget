@@ -16,12 +16,12 @@ function Header() {
         <h1>Welcome to SleighBudget!</h1>
         <h2><em>Slay the Season</em></h2>
       </StyledHeader>
-          <ul>
+        <ul style={{listStyleType: "none"}}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" style={{color: "red", textDecoration: "none"}}>Home</Link>
           </li>
           <li>
-            <Link to="/signin">Sign In</Link>
+            <Link to="/signin" style={{color: "red", textDecoration: "none"}}>Sign In</Link>
           </li>
         </ul>
     </>
