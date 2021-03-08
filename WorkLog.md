@@ -55,3 +55,5 @@
 #### 3/08/2021
 
 * 9:00 - Test functionality on the darkMode branch. If functionality is 100% then I will merge with Main
+
+* 9:23 - Merged darkMode branch with Main branch
