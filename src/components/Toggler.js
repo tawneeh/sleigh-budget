@@ -6,7 +6,7 @@ const Button = styled.button` {/* can make this button an icon instead of a reg 
   background: ${({ theme }) => theme.background};
   border: 2px solid ${({ theme }) => theme.toggleBorder};
   color: ${({ theme }) => theme.text};
-  border-radius: 30px;
+  border-radius: 10px;
   cursor: pointer;
   font-size:0.8rem;
   padding: 0.6rem;
