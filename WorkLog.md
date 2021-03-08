@@ -51,3 +51,7 @@
 * 4:34 - 'Add a Gift' bug is fixed! However, editing a gift is not working
 
 * 4:47 - Start adding Dark Mode - https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
+
+#### 3/08/2021
+
+* 9:00 - Test functionality on the darkMode branch. If functionality is 100% then I will merge with Main
