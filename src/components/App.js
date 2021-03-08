@@ -9,6 +9,7 @@ import Toggle from './Toggler';
 import { useDarkMode } from './useDarkMode';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './../App.css';
+import Graph from './Graph';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <GlobalStyles />
         <Router>
           <Header />
+          <Graph />
             <Toggle theme={theme} toggleTheme={themeToggler} /> {/* this determines the toggle button location -- inline styling for placement?*/}
           <Switch>
             <Route path="/signin">
