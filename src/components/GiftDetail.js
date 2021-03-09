@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import StyledButton from './StyledButton';
 
 function GiftDetail(props) {
   const { gift, onClickingDelete } = props;
-  console.log(gift); // dollarAmount is returning undefined
   return (
     <>
       <h1>Gift Details</h1>
       <h3>{gift.recipient}</h3>
       <h3>{gift.giftName}</h3>
       <h3>{gift.dollarAmount}</h3>
-      <button onClick={ props.onClickingEdit }>Update this Gift</button>
-      <button onClick={ ()=> onClickingDelete(gift.id) }>Delete</button>
+      <StyledButton onClick={ props.onClickingEdit }>Update this Gift</StyledButton>
+      <StyledButton onClick={ ()=> onClickingDelete(gift.id) }>Delete</StyledButton>
     </>
   );
 }
