@@ -71,3 +71,5 @@
 #### 3/09/2021
 
 * 9:18 - Been styling all morning. Broke button functionality
+
+* 10:53 - Watch chart.js videos. Want to update graphs with data from Firestore
