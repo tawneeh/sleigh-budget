@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react';
 import Chart from 'chart.js';
-import { useFirestoreConnect } from 'react-redux-firebase';
 
 function Graph() {
-  useFirestoreConnect([
-    { collection: 'gifts' }
-  ]);
-
   useEffect(() => {
     const ctx = document.getElementById("giftTotal");
     new Chart(ctx, {
@@ -16,7 +11,7 @@ function Graph() {
         datasets: [
           {
             label: "Dollar Bills",
-            data: [10, gift.dollarAmount, 0],
+            data: [10, 80, 0],
             backgroundColor: [
               "Red",
               "Green"
