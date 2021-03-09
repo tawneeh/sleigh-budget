@@ -100,9 +100,9 @@ class GiftControl extends React.Component {
       }
       return (
         <>
-          <Graph />
           {currentVisibleState}
           <StyledButton onClick={this.handleClick}>{buttonText}</StyledButton>
+          <Graph />
         </>
       );
     }
