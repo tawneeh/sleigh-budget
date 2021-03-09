@@ -1,5 +1,6 @@
 import React from 'react';
 import Gift from './Gift';
+import Graph from './Graph';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
@@ -22,6 +23,7 @@ function GiftList(props) {
           id={gift.id}
           key={gift.id} />
       })}
+      <Graph />
     </>
   );
 
