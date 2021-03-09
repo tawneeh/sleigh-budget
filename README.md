@@ -1,6 +1,6 @@
 # 🎄⚛️🎃 _SleighBudget_
 
-#### _SLay the Season_
+#### _Slay the Season_
 #### _DATE 02.26.2021_
 
 #### ✒️ By _**Tawnee Harris**_
