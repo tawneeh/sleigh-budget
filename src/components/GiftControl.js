@@ -3,6 +3,7 @@ import NewGiftForm from "./NewGiftForm";
 import GiftList from "./GiftList";
 import GiftDetail from "./GiftDetail";
 import EditGiftForm from "./EditGiftForm";
+import StyledButton from './StyledButton';
 import * as a from './../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -36,7 +37,7 @@ class GiftControl extends React.Component {
       const firestoreGift = {
         recipient: gift.get("recipient"),
         giftName: gift.get("giftName"),
-        dollarAmount: gift.get("dollarAmlunt"),
+        dollarAmount: gift.get("dollarAmount"),
         id: gift.id
     }
     this.setState({selectedGift: firestoreGift});
@@ -99,7 +100,7 @@ class GiftControl extends React.Component {
       return (
         <>
           {currentVisibleState}
-          <button onClick={this.handleClick}>{buttonText}</button>
+          <StyledButton onClick={this.handleClick}>{buttonText}</StyledButton>
         </>
       );
     }
