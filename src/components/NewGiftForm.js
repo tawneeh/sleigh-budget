@@ -24,14 +24,9 @@ function NewGiftForm(props) {
     <>
       <ReusableForm
         formSubmissionHandler={addGiftToFirestore}
-        buttonText="Log a new Gift!" />
+        buttonText="Add a new Gift!" />
     </>
   );
-
-  //   function handleNewGiftFormSubmission(event) {
-  //   event.preventDefault();
-  //   props.onNewGiftCreation({recipient: event.target.recipient.value, giftName: event.target.giftName.value, dollarAmount: parseInt(event.target.dollarAmount.value), id: v4()});
-  // }
 
 }
 

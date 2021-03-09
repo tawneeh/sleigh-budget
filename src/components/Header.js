@@ -13,7 +13,7 @@ function Header() {
   return (
     <>
       <StyledHeader>
-        <h1>Welcome to SleighBudget!</h1>
+        <h1>SleighBudget</h1>
         <h2><em>Slay the Season</em></h2>
       </StyledHeader>
         <ul style={{listStyleType: "none"}}>

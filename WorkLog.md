@@ -67,3 +67,7 @@
 * 3:00 - Look into making my toggle dark mode button a jack-o-lantern icon
 
 * 4:40 - Watch video on D3.js and Firebase - might switch from chart.js to D3
+
+#### 3/09/2021
+
+* 9:18 - Been styling all morning. Broke button functionality

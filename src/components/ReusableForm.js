@@ -1,24 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+import StyledButton from './StyledButton';
+import { FormGroup } from './StyledForm';
 
 function ReusableForm(props) {
   return (
     <>
-      <form onSubmit={props.formSubmissionHandler}>
-        <input
-          type='text'
-          name='recipient'
-          placeholder='Intended Recipient' />
-        <input
-          type='text'
-          name='giftName'
-          placeholder='The Gift' />
-        <input
-          type='number'
-          name='dollarAmount'
-          placeholder='$$' />
-      <button type='submit'>{props.buttonText}</button>
-      </form>
+      <FormGroup>
+        <form onSubmit={props.formSubmissionHandler}>
+          <input
+            type='text'
+            name='recipient'
+            placeholder='recipient' />
+          <input
+            type='text'
+            name='giftName'
+            placeholder='gift' />
+          <input
+            type='number'
+            name='dollarAmount'
+            placeholder='$' />
+        <StyledButton type='submit'>{props.buttonText}</StyledButton>
+        </form>
+      </FormGroup>
     </>
   );
 }

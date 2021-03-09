@@ -1,5 +1,7 @@
 import React from 'react';
 import firebase from 'firebase/app';
+import StyledButton from './StyledButton';
+import { FormGroup, Input } from './StyledForm';
 
 function Signin() {
   function doSignUp(event) {
@@ -34,34 +36,35 @@ function Signin() {
 
   return (
     <>
-      <h1>Sign up</h1>
-      <form onSubmit={doSignUp}>
-        <input
+      <h1 style={{ textAlign: "center" }}>Sign up</h1>
+      <FormGroup onSubmit={doSignUp}>
+        <Input
           type='text'
           name='email'
-          placeholder='Email' />
-        <input
+          placeholder='email' />
+        <Input
           type='password'
           name='password'
-          placeholder='Password' />
-        <button type='submit'>Sign up</button>
-      </form>
+          placeholder='password' />
+        <StyledButton type='submit'>Sign up</StyledButton>
+      </FormGroup>
 
-      <h1>Sign In</h1>
-      <form onSubmit={doSignIn}>
-        <input
-          type='text'
-          name='signinEmail'
-          placeholder='email' />
-        <input
-          type='password'
-          name='signinPassword'
-          placeholder='Password' />
-        <button type='submit'>Sign in</button>
-      </form>
+      <h1 style={{ textAlign: "center" }}>Sign In</h1>
+      <FormGroup>
+        <form onSubmit={doSignIn}>
+          <input
+            type='text'
+            name='signinEmail'
+            placeholder='email' />
+          <input
+            type='password'
+            name='signinPassword'
+            placeholder='password' />
+          <StyledButton type='submit'>Sign in</StyledButton>
+        </form>
+      </FormGroup>
 
-      <h3>Sign Out</h3>
-      <button onClick={doSignOut}>Sign Out</button>
+      <StyledButton onClick={doSignOut}>Sign Out</StyledButton>
     </>
   );
 }
