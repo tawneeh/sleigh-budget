@@ -59,3 +59,5 @@
 * 9:23 - Merged darkMode branch with Main branch
 
 * 10:55 - Research the best way to display the budgeting data visualization. Two graphs? 
+
+* 9:18 - Been styling all morning. Broke button functionality 
