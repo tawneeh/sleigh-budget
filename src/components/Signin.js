@@ -24,6 +24,11 @@ function Signin() {
     }).catch(function(error) {
       console.log(error.message);
     });
+    // firebase.auth().signInWithRedirect();
+    // firebase.auth().onAuthStateChanged(user => {
+    //   if(user) {
+    //   }
+    // });
   }
 
   function doSignOut() {
