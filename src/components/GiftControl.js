@@ -2,7 +2,7 @@ import React from "react";
 import GiftDetail from "./GiftDetail";
 import GiftList from "./GiftList";
 import EditGiftForm from "./EditGiftForm";
-import Graph from './Graph';
+//import Graph from './Graph';
 import NewGiftForm from "./NewGiftForm";
 import StyledButton from './StyledButton';
 import * as a from './../actions';
@@ -102,7 +102,7 @@ class GiftControl extends React.Component {
         <>
           {currentVisibleState}
           <StyledButton onClick={this.handleClick}>{buttonText}</StyledButton>
-          <Graph />
+          {/* <Graph /> */}
         </>
       );
     }
