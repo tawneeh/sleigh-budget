@@ -1,8 +1,9 @@
 import React from "react";
-import NewGiftForm from "./NewGiftForm";
-import GiftList from "./GiftList";
 import GiftDetail from "./GiftDetail";
+import GiftList from "./GiftList";
 import EditGiftForm from "./EditGiftForm";
+import Graph from './Graph';
+import NewGiftForm from "./NewGiftForm";
 import StyledButton from './StyledButton';
 import * as a from './../actions';
 import PropTypes from 'prop-types';
@@ -99,6 +100,7 @@ class GiftControl extends React.Component {
       }
       return (
         <>
+          <Graph />
           {currentVisibleState}
           <StyledButton onClick={this.handleClick}>{buttonText}</StyledButton>
         </>

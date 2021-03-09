@@ -58,6 +58,16 @@
 
 * 9:23 - Merged darkMode branch with Main branch
 
-* 10:55 - Research the best way to display the budgeting data visualization. Two graphs? 
+* 10:55 - Research the best way to display the budgeting data visualization. Two graphs?
 
-* 9:18 - Been styling all morning. Broke button functionality 
+* 1:30 - Meeting with Brooke
+
+* 2:15 - Research displaying data dynamically from Firestore using chart.js. Not a lot of luck finding good docs so far
+
+* 3:00 - Look into making my toggle dark mode button a jack-o-lantern icon
+
+* 4:40 - Watch video on D3.js and Firebase - might switch from chart.js to D3
+
+#### 3/09/2021
+
+* 9:18 - Been styling all morning. Broke button functionality

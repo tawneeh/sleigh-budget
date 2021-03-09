@@ -21,7 +21,7 @@ function Header() {
             <Link to="/" style={{color: "red", textDecoration: "none"}}>Home</Link>
           </li>
           <li>
-            <Link to="/signin" style={{color: "red", textDecoration: "none"}}>Sign In</Link>
+            <Link to="/signin" style={{color: "red", textDecoration: "none"}}>Account</Link>
           </li>
         </ul>
     </>

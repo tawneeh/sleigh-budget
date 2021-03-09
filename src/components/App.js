@@ -20,8 +20,8 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
         <Router>
+          <Toggle theme={theme} toggleTheme={themeToggler} /> {/* this determines the toggle button location -- inline styling for placement?*/}
           <Header />
-            <Toggle theme={theme} toggleTheme={themeToggler} /> {/* this determines the toggle button location -- inline styling for placement?*/}
           <Switch>
             <Route path="/signin">
               <Signin />
