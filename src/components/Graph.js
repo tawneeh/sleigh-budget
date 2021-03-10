@@ -6,9 +6,15 @@ function Graph(props) {
   console.log(props); // passing down gift object - object within an object
   console.log(props[0].dollarAmount);
 
-  for (const [key, value] of Object.entries(props)) {
-  console.log(`${key}: ${value}`);
+  let arr = [];
+  for (var dollarAmount in props) {
+    if (props.hasOwnProperty(dollarAmount)) {
+      console.log(dollarAmount);
+      //arr.push(dollarAmount);
+    }
   }
+
+  console.log(arr);
 
   useEffect(() => {
     const ctx = document.getElementById("giftTotal");
@@ -19,7 +25,7 @@ function Graph(props) {
         datasets: [
           {
             label: "Dollar Bills",
-            data: [30, props[0].dollarAmount, 0],
+            data: [30, 50, 0],
             backgroundColor: [
               "Red",
               "Green"
