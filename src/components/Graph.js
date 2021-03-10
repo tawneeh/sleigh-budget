@@ -3,19 +3,13 @@ import Chart from 'chart.js';
 import PropTypes from 'prop-types';
 
 function Graph(props) {
-  //const { gift } = props; // remove this and console.log(props) if issues happen
 
   console.log(props, "graph line 6"); // passing down gift object - object within an object
   console.log(props[0].dollarAmount); // not undefined when adding the bracket notation!
 
-  // const total = gifts.map((gift) => {
-  //   // loop through gifts and add all of the dollarAmount properties together
-  //   // gift.dollarAmount 
-  // })
-
-  // const total = Object.entries(gift) {
-
-  // }
+  for (const [key, value] of Object.entries(props)) {
+  console.log(`${key}: ${value}`);
+  }
 
   useEffect(() => {
     const ctx = document.getElementById("giftTotal");
@@ -26,7 +20,7 @@ function Graph(props) {
         datasets: [
           {
             label: "Dollar Bills",
-            data: [10, props[0].dollarAmount, 0], // can hard code a dollarAmount in GiftList to pass down if needed
+            data: [10, props[0].dollarAmount, 0], 
             backgroundColor: [
               "Red",
               "Green"
