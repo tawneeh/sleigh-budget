@@ -4,6 +4,7 @@ import StyledButton from './StyledButton';
 
 function GiftDetail(props) {
   const { gift, onClickingDelete } = props;
+  console.log(gift);
   return (
     <>
       <h1>Gift Details</h1>
