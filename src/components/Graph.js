@@ -1,19 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-//import Chart from 'chart.js';
-//import * as data from './gift.json'; (only if using JSON Object file)
+import React, { useEffect } from 'react';
+import Chart from 'chart.js';
 
-function Graph(props) {
-  const { gift } = props;
-  console.log(gift); // undefined. not passing props properly
-
+function Graph() {
+  useEffect(() => {
+    const ctx = document.getElementById("giftTotal");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Saved", "Needed"],
+        datasets: [
+          {
+            label: "Dollar Bills",
+            data: [10, 19, 0],
+            backgroundColor: [
+              "Red",
+              "Green"
+            ],
+            borderColor: ["Red", "Green"],
+            borderWidth: 1
+          }
+        ]
+      }
+    });
+  });
   return (
-    <h1>{props.dollarAmount}</h1>
+    <>
+      <canvas id="giftTotal" width="40" height="40" />
+    </>
   );
 }
-
-Graph.propTypes = {
-  gift: PropTypes.object
-};
 
 export default Graph;
