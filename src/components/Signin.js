@@ -22,7 +22,7 @@ function Signin() {
     const password = event.target.signinPassword.value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log("Sign in success!");
-      if(firebase.user) return <Redirect to='/home' /> // not working
+      if(firebase.auth.uid) return <Redirect to='/' /> // not working
     }).catch(function(error) {
       console.log(error.message);
     });
@@ -44,26 +44,32 @@ function Signin() {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Sign up</h1>
-      <FormGroup onSubmit={doSignUp}>
-        <Input
-          type='text'
-          name='email'
-          placeholder='email' />
-        <Input
-          type='password'
-          name='password'
-          placeholder='password' />
-        <StyledButton type='submit'>Sign up</StyledButton>
+      <FormGroup>
+        <form onSubmit={doSignUp}>
+          <Input
+            input
+            type='text'
+            name='email'
+            placeholder='email' />
+          <Input
+            input
+            type='password'
+            name='password'
+            placeholder='password' />
+          <StyledButton type='submit'>Sign up</StyledButton>
+        </form>
       </FormGroup>
 
       <h1 style={{ textAlign: "center" }}>Sign In</h1>
       <FormGroup>
         <form onSubmit={doSignIn}>
-          <input
+          <Input
+            input
             type='text'
             name='signinEmail'
             placeholder='email' />
-          <input
+          <Input
+            input
             type='password'
             name='signinPassword'
             placeholder='password' />
@@ -72,6 +78,7 @@ function Signin() {
       </FormGroup>
 
       <StyledButton onClick={doSignOut}>Sign Out</StyledButton>
+
     </>
   );
 }
