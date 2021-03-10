@@ -15,7 +15,7 @@ function Graph(props) {
         datasets: [
           {
             label: "Dollar Bills",
-            data: [10, props.dollarAmount, 0],
+            data: [10, props.dollarAmount, 0], // can hard code a dollaAmount in GiftList to pass down if needed
             backgroundColor: [
               "Red",
               "Green"
