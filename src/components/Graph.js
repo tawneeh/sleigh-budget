@@ -3,19 +3,28 @@ import Chart from 'chart.js';
 
 function Graph(props) {
 
-  console.log(props, "graph line 6"); // passing down the whole gift object (i think object)
+  console.log(props, "graph line 6"); // passing down gift object - object within an object
   console.log(props.dollarAmount); // undefined
+
+  // const total = gifts.map((gift) => {
+  //   // loop through gifts and add all of the dollarAmount properties together
+  //   // gift.dollarAmount 
+  // })
+
+  const total = Object.entries(props) {
+    
+  }
 
   useEffect(() => {
     const ctx = document.getElementById("giftTotal");
     new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Saved", "Needed"],
+        labels: ["Saved", "Gift List Total"],
         datasets: [
           {
             label: "Dollar Bills",
-            data: [10, props.dollarAmount, 0], // can hard code a dollaAmount in GiftList to pass down if needed
+            data: [10, 50, 0], // can hard code a dollarAmount in GiftList to pass down if needed
             backgroundColor: [
               "Red",
               "Green"
@@ -27,6 +36,7 @@ function Graph(props) {
       }
     });
   });
+
   return (
     <>
       <canvas id="giftTotal" width="40" height="40" />
