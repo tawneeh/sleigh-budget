@@ -2,6 +2,7 @@ import React from 'react';
 import Gift from './Gift';
 import Graph from './Graph';
 import PropTypes from 'prop-types';
+import StyledList from './StyledList';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 
@@ -15,15 +16,17 @@ function GiftList(props) {
   if (isLoaded(gifts)) {
   return (
     <>
-      {gifts.map((gift) => {
-        return <Gift
-          whenGiftClicked = { props.onGiftSelection }
-          recipient={gift.recipient}
-          giftName={gift.giftName}
-          dollarAmount={gift.dollarAmount}
-          id={gift.id}
-          key={gift.id} />
-      })}
+      <StyledList>
+        {gifts.map((gift) => {
+          return <Gift
+            whenGiftClicked = { props.onGiftSelection }
+            recipient={gift.recipient}
+            giftName={gift.giftName}
+            dollarAmount={gift.dollarAmount}
+            id={gift.id}
+            key={gift.id} />
+        })}
+      </StyledList>
       <Graph />
     </>
   );
