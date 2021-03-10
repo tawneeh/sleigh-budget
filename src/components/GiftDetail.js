@@ -4,16 +4,21 @@ import StyledButton from './StyledButton';
 
 function GiftDetail(props) {
   const { gift, onClickingDelete } = props;
-  console.log(gift);
+
+  const listStyles = {
+    textAlign: 'center',
+    fontStyle: 'italic'
+  }
+
   return (
-    <>
+    <div style={listStyles}>
       <h1>Gift Details</h1>
       <h3>{gift.recipient}</h3>
       <h3>{gift.giftName}</h3>
-      <h3>{gift.dollarAmount}</h3>
+      <h3>${gift.dollarAmount}</h3>
       <StyledButton onClick={ props.onClickingEdit }>Update this Gift</StyledButton>
       <StyledButton onClick={ ()=> onClickingDelete(gift.id) }>Delete</StyledButton>
-    </>
+    </div>
   );
 }
 
