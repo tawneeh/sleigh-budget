@@ -1,37 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 //import Chart from 'chart.js';
-import firebase from './../firebase';
 //import * as data from './gift.json'; (only if using JSON Object file)
 
-function Graph() {
-
-  const [gifts, setGifts] = useState([]);
-  const fetchGifts = async() => {
-    const response = firebase.collection('gifts');
-    const data = await response.get();
-    data.docs.forEach(item => {
-      setGifts([...gifts, item.data()])
-    })
-  }
-
-  useEffect(() => {
-    fetchGifts();
-  }, [])
+function Graph(props) {
+  const { gift } = props;
+  console.log(gift); // undefined. not passing props properly
 
   return (
-    <>
-      {
-        gifts && gifts.map(gift => {
-          return (
-          <>
-            <h1>{gift.dollarAmount}</h1>
-            {/* <canvas id="giftTotal" width="100" height="100" /> */}
-          </>
-          )
-        })
-      }
-    </>
+    <h1>{props.dollarAmount}</h1>
   );
 }
+
+Graph.propTypes = {
+  gift: PropTypes.object
+};
 
 export default Graph;
