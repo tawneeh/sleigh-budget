@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from 'firebase/app';
 import StyledButton from './StyledButton';
 import { FormGroup, Input } from './StyledForm';
+import { Redirect } from 'react-router-dom';
 
 function Signin() {
   function doSignUp(event) {
@@ -20,7 +21,8 @@ function Signin() {
     const email = event.target.signinEmail.value;
     const password = event.target.signinPassword.value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-      console.log("Sign in success!"); // Route to Home on successful Signin
+      console.log("Sign in success!");
+      if(firebase.user) return <Redirect to='/home' /> // not working
     }).catch(function(error) {
       console.log(error.message);
     });
