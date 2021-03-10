@@ -6,7 +6,9 @@ const StyledHeader = styled.header`
   background-color: red;
   text-align: center;
   color: white;
+  border-radius: 10px;
   padding-bottom: 15px;
+  padding-top: 25px;
 `;
 
 function Header() {
