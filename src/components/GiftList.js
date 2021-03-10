@@ -27,7 +27,8 @@ function GiftList(props) {
             key={gift.id} />
         })}
       </StyledList>
-      <Graph />
+      <Graph 
+        {...gifts}/>
     </>
   );
 
