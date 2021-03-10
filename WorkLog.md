@@ -73,3 +73,26 @@
 * 9:18 - Been styling all morning. Broke button functionality
 
 * 10:53 - Watch chart.js videos. Want to update graphs with data from Firestore
+
+#### 3/10/2021
+
+* 11:45 - Work on Graphing total dollarAmount from entire GiftList passed down to the Graph component
+
+Notes:
+
+console.log:
+{0: {…}}0: dollarAmount: 1000giftName: "Great things"id: "sisgYThHuHAleiiV1pX1"recipient: "Me"__proto__: Object__proto__: Object "graph line 6"
+
+console.log:
+Property Path: 
+[0].dollarAmount
+
+Work on function to get total:
+  const total = gifts.map((gift) => {
+  loop through gifts and add all of the dollarAmount properties together
+  gift.dollarAmount 
+  })
+
+.map() might not work since props is an object hence --- 
+  const total = Object.entries(props) {
+  }
