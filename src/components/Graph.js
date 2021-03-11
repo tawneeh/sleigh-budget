@@ -34,7 +34,7 @@ function Graph(props) {
 
   return (
     <>
-      <canvas id="giftTotal" width="400" height="400" />
+      <canvas id="giftTotal" width="600" height="600" />
     </>
   );
 }
