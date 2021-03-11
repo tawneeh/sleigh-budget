@@ -1,7 +1,7 @@
 # 🎄⚛️🎃 _SleighBudget_
 
 #### _Slay the Season_
-#### _DATE 02.26.2021_
+#### _DATE 03.11.2021_
 
 #### ✒️ By _**Tawnee Harris**_
 
@@ -29,8 +29,8 @@ Setup Instructions
 
 Actions and reducers have been tested. To run the tests, type `npm test` into the terminal. If `No tests found` is stated in the terminal, please press `a` to run all tests.
 
-* Test Suites: TODO
-* Tests: TODO
+* Test Suites: 4
+* Tests: 8
 * All tests passing
 
 ## 🌳 React Component Tree
@@ -39,7 +39,7 @@ Actions and reducers have been tested. To run the tests, type `npm test` into th
 
 ## 🐜 Known Bugs
 
-This application...
+This application does not sucessfully update a Gift in the list yet. 
 
 ## ☎️ Support and Contact Details
 
@@ -51,10 +51,14 @@ Please feel free to reach out to me anytime at <tawneeh@icloud.com>
 * Redux
 * JavaScript
 * JSX
+* Firebase BaaS
+* Firestore
+* Chart.js library
 * Jest Testing
 * Webpack
 * Babel
 * Eslint
+* Styled-components library
 * Created using `create-react-app`
 
 ### License
