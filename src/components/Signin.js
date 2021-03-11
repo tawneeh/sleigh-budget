@@ -22,15 +22,10 @@ function Signin() {
     const password = event.target.signinPassword.value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log("Sign in success!");
-      if(firebase.auth.uid) return <Redirect to='/' /> // not working
+      if(firebase.user) return <Redirect to='/' />
     }).catch(function(error) {
       console.log(error.message);
     });
-    // firebase.auth().signInWithRedirect();
-    // firebase.auth().onAuthStateChanged(user => {
-    //   if(user) {
-    //   }
-    // });
   }
 
   function doSignOut() {

@@ -12,7 +12,6 @@ function GiftList(props) {
   ]);
 
   const gifts = useSelector(state => state.firestore.ordered.gifts);
-  console.log(gifts);
   if (isLoaded(gifts)) {
   return (
     <>

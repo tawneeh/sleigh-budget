@@ -8,13 +8,6 @@ let store = createStore(rootReducer);
 
 describe("rootReducer", () => {
 
-  // test('Should return default state if there is no action type passed in', () => {
-  //   expect(rootReducer({}, { type: null })).toEqual({
-  //     formVisibleOnPage: false,
-  //     firestore: { firestoreReducer }
-  //   });
-  // });
-
   test('Check that initial state of formVisibleReducer matches root reducer', () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
