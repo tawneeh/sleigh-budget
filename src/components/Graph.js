@@ -12,7 +12,7 @@ function Graph(props) {
     new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Saved", "Total"],
+        labels: ["Saved", "Needed"],
         datasets: [
           {
             label: "Dollar Bills",
