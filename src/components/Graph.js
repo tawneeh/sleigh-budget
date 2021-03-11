@@ -3,22 +3,16 @@ import Chart from 'chart.js';
 
 function Graph(props) {
 
-  console.log(props); // passing down gift object - object within an object
-  console.log(props[0].dollarAmount);
-
-  const values = Object.values(props); // array of objects
-  const result = values.map(a => a.dollarAmount); // loop through the array
-  console.log(result); // result is an array of dollarAmount numbers!
-
-  const total = result.reduce((a, b) => a + b, 0); // might add them all up!
-  console.log(total);
+  const values = Object.values(props);
+  const result = values.map(a => a.dollarAmount);
+  const total = result.reduce((a, b) => a + b, 0);
 
   useEffect(() => {
     const ctx = document.getElementById("giftTotal");
     new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Saved", "Gift List Total"],
+        labels: ["Saved", "Total"],
         datasets: [
           {
             label: "Dollar Bills",
