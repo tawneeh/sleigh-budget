@@ -86,13 +86,3 @@ console.log:
 console.log:
 Property Path: 
 [0].dollarAmount
-
-Work on function to get total:
-  const total = gifts.map((gift) => {
-  loop through gifts and add all of the dollarAmount properties together
-  gift.dollarAmount 
-  })
-
-.map() might not work since props is an object hence --- 
-  const total = Object.entries(props) {
-  }
